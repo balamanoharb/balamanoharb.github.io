@@ -1,0 +1,1 @@
+https://towardsdatascience.com/mcculloch-pitts-model-5fdf65ac5dd1
