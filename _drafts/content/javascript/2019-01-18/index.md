@@ -1,9 +1,7 @@
 ---
 title: "How equality works in JavaScript"
-date: "2019-01-18T08:04:01.296Z"
-category: "tech"
-tags:
-  - javascript
+date: "2023-10-12 06:57:42 +0530"
+tags: javascript
 ---
 
 ## Loose equality / Double equals operator (==)

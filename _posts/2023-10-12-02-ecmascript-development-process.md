@@ -1,12 +1,12 @@
 ---
-title: "ECMAScript development Process and TC39"
-date: "2019-01-16T10:28:52.112Z"
-category: "tech"
-tags:
-  - javascript
+layout: post
+title: "ECMAScript Development Process and TC39"
+permalink: ecmascript-development-process
+date: "2023-10-12 06:19:59 +0530"
+tags: javascript
 ---
 
-If we compare JavaScript from its early years and the present, they would be worlds apart. The language has evolved so much, that it looks like a brand new language from its beginning. To understand how the language has grown so much, it is important to know the workings of the committee that drove its evolution. This article will explore just that.
+If we compare JavaScript from its early years and the present, they would be worlds apart. The language has evolved so much, that it looks like a brand new language from its beginning. To understand how the language has grown so much, it is important to know the workings of the committee that drove its evolution.
 
 ## TC39 - Development Process
 

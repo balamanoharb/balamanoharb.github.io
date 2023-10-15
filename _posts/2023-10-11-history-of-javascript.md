@@ -1,12 +1,12 @@
 ---
-title: "A Short History Of JavaScript"
-date: "2019-01-14T08:28:52.112Z"
-category: "tech"
-tags:
-  - javascript
+layout: post
+title:  History of JavaScript - summary
+date:  2023-10-11 07:00:00 +0530
+permalink: history-of-javascript
+tags: javascript
 ---
 
-JavaScript was created by <a href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank" rel="nofollow noopener"> Brendan Eich </a> in 1995 in a span of 10 days. JavaScript has become one of the world’s most popular programming language from being one of the most misunderstood languages. This series of articles will give a sense of why Javascript is the way it is.
+JavaScript was created by <a href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank" rel="nofollow noopener"> Brendan Eich </a> in 1995 in a span of 10 days. It is one of the most: used, loved, hated, mis-understood programming language.
 
 > The World's most misunderstood programming language has become the world's most popular programming language.
 > -- Douglas Crockford
@@ -53,11 +53,11 @@ Netscape marketing changed the name to LiveScript because it already had several
 
 **Thus JavaScript was born.**
 
-### Source
+## References
 
 - <a title="Crockford on JavaScript - Chapter 2" href="https://www.youtube.com/watch?v=RO1Wnu-xKoY" target="_blank" rel="nofollow noopener">Crockford on JavaScript - Chapter 2</a>
 - Infoworld - <a title="JavaScript creator ponders past, future" href="https://www.infoworld.com/article/2653798/application-development/javascript-creator-ponders-past--future.html" target="_blank" rel="nofollow noopener">JavaScript creator ponders past, future</a>
 - Computerworld - <a title="The A-Z of Programming Languages: JavaScript" href="https://www.computerworld.com.au/article/255293/a-z_programming_languages_javascript/" target="_blank" rel="nofollow noopener">The A-Z of Programming Languages: JavaScript</a>
-- Brendan Eich’s blog - <a href="https://brendaneich.com/2008/04/popularity/" target="_blank" rel="nofollow noopener">Popularity</a></li>
-- Computing conversation with Brendan Eich [<a href="https://youtu.be/IPxQ9kEaF8c">youtube</a>]
-- <a title="A brief history of javascript" href="https://auth0.com/blog/a-brief-history-of-javascript/" target="_blank" rel="nofollow noopener">A brief history of javascript</a> - this by far is a detailed history of JavaScript I've ever read
+- Brendan Eich’s blog - <a href="https://brendaneich.com/2008/04/popularity/" target="_blank" rel="nofollow noopener">Popularity</a>
+- [Computing conversation with Brendan Eich](https://youtu.be/IPxQ9kEaF8c){:target="_blank"}{:rel="noopener noreferrer"}
+- <a title="A brief history of javascript" href="https://auth0.com/blog/a-brief-history-of-javascript/" target="_blank" rel="nofollow noopener">A brief history of javascript</a>
