@@ -2,7 +2,7 @@
 layout: post
 title: "Execution context"
 date: "2023-10-12 20:49:15 +0530"
-permalink: how-javascript-runs-code
+permalink: execution-context
 tags: javascript
 ---
 
