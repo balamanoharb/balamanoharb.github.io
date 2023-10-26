@@ -1,16 +1,16 @@
 ---
-title: "Pass By Value and Pass By Reference in JavaScript"
-date: "2019-01-19T12:10:32.848Z"
-category: "tech"
-tags:
-  - javascript
+layout: "post"
+title: "Data Types and Pass By Value vs Reference in JavaScript"
+date: "2023-10-17 21:40:16 +0530"
+permalink: "data-types-and-pass-by-value-vs-pass-by-reference-in-javascript"
+tags: javascript
 ---
 
 To understanding how passing around arguments into functions work in javascript, we should first understand the types of data and how they are stored in javascript.
 
 ## Data Types in JavaScript
 
-Javascript is an **untyped** language (i.e) no typed declaration for variable. This means that a variable can store any type of data. This is often misunderstood as no data type in javascript.
+Javascript is an **untyped** or rather **dynamically typed** language (i.e) no typed declaration for variable. This means that a variable can store any type of data. This is often misunderstood as no data type in javascript.
 
 With the latest ECMAScript standard there are seven data types in javascript.
 
@@ -29,7 +29,7 @@ In context of pass by value and pass by reference, we should be looking only at 
 
 ### Primitive Values (_assign by value_)
 
-![Primitive Data](./primitive-data.jpg)
+![Primitive Data](/assets/images/primitive-data.jpg)
 
 - Primitive Values are always _immutable_.
 - Primitive values are always assigned by value (i.e) copied
@@ -46,7 +46,7 @@ Changing ditto doesn't affect pika at all. when pika was assigned to ditto, ditt
 
 ### Compound Values (_assign by reference_)
 
-![Compound Data](./compound-data.jpg)
+![Compound Data](/assets/images/compound-data.jpg)
 
 - Compound Values are mutable by default. (unless it is frozen)
 - Compound Values are always assigned by reference
@@ -91,11 +91,11 @@ passByReference(crow); //crow's reference is copied into koel
 console.log(crow); //[1, 2, 3, 100]
 ```
 
-## An Aside
+## Data Retrieval
 
-![Data Retrieval](./data-retrieval.jpg)
+![Data Retrieval](/assets/images/data-retrieval.jpg)
 
-Now that we have understood pass by value and pass by reference. Let's dive a little deeper. If we look at how actually the data is stored in a variable, we can say that javascript is always copying the values. It is just the retrieval process that makes the difference.
+If we look at how actually the data is stored in a variable, we can say that javascript is always copying the values. It is just the retrieval process that makes the difference.
 
 In case of Object, the value stored in the variable is the address of object. so all operations are done after retrieving the object and the value is updated to the object itself.
 
@@ -106,4 +106,4 @@ let x = "my string";
 x += "is awesome"; // creates a new string "my string is awesome" and old value is replaced
 ```
 
-It can be seen as if only read and write(replace) operation are permitted in case of primitive data. There is no update.
+It can be seen as if only read and replace operation are permitted in case of primitive data. There is no update.

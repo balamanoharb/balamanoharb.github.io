@@ -1,16 +1,14 @@
 ---
-title: "Understanding Truthy and Falsy in Javascript"
-date: "2019-01-20T15:46:16.386Z"
-category: "tech"
-tags:
-  - javascript
+layout: "post"
+title: "Truthy and Falsy in Javascript"
+date: "2023-10-19 21:40:58 +0530"
+permalink: truthy-and-falsy-in-javascript
+tags: javascript
 ---
-
-## Truthy and Falsy values in JavaScript
 
 In JavaScript, it is important to understand that, not just the boolean values _true_ and _false_ evaluates to true and false but there are other values which are considered as true and false in certain context.
 
-### Falsy Values
+## Falsy Values
 
 - Values that evaluate to _false_ in Boolean context
 - There are a total of six falsy values in javascript
@@ -25,15 +23,16 @@ In JavaScript, it is important to understand that, not just the boolean values _
 - all of these are considered to be false
 
 ```javascript
-if (false)
-if (null)
-if (undefined)
-if (0)
-if (NaN)
-if ('')
-if ("")
-if (``)
-if (document.all)
+if (false) console.log('if check passed')
+if (null) console.log('if check passed')
+if (undefined) console.log('if check passed')
+if (0) console.log('if check passed')
+if (NaN) console.log('if check passed')
+if ('') console.log('if check passed')
+if ("") console.log('if check passed')
+if (``) console.log('if check passed')
+
+/* None of above statements will log*/
 ```
 
 ### Truthy Values
@@ -60,7 +59,7 @@ if (Infinity)
 if (-Infinity)
 ```
 
-### Boolean Context
+## Boolean Context
 
 - Any boolean conditional that evaluates to true or false
 - The simplest example of Boolean context is _if_ condition and _loops_
@@ -69,4 +68,22 @@ if (-Infinity)
 if(<Boolean Conditional>){}
 
 for (control variable; <boolean conditional>; counter) {}
+```
+
+## Existence check
+
+- If you need to check for an existence, you can use coercion and boolean context to your advantage.
+
+```javascript
+if(myVar) {
+    //code block
+}
+```
+
+- This will be fine for most cases. But if you are expecting 0 or any other falsy values to be in expected valid values, you can simply add them in or condition
+
+```javascript
+if(myVar || myVar === 0) {
+    //code block
+}
 ```
