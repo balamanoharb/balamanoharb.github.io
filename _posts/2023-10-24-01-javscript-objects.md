@@ -52,6 +52,20 @@ var address_details = ["home address", "office address", "home phone"];
 address_details.map(prop => [prop, data[prop]]);
 ```
 
+## Functions are special objects.
+
+- In JavaScript, functions are objects. They vary from conventional objects in few ways:
+1. `name` property - stores the name of the function.
+2. becomes invokable - `function_name()`.
+3. stores the code as value - `function_name` returns the entire code block.
+
+```javascript
+function pokeDex() {
+    console.log("Initializing the dex...");
+}
+pokeDex.version = "0.1"; // valid because functions are objects.
+```
+
 ## Namespace
 
 Objects are used for faking namespace as an Object is self contained.
@@ -75,76 +89,65 @@ var project = {
 - JavaScript engine has `JSON.stringify(any_object)` and `JSON.parse(string_value)`
 - JSON are used as data formats for communicating.
 
-## Functions are special objects.
+## Array
 
-- In JavaScript, functions are objects. They vary from conventional objects in few ways:
-1. `name` property - stores the name of the function.
-2. becomes invokable - `function_name()`.
-3. stores the code as value - `function_name` returns the entire code block.
+- Array is a collection of things. It can hold anything (primary values, objects, functions, another array, Symbols).
 
-```javascript
-function pokeDex() {
-    console.log("Initializing the dex...");
-}
-pokeDex.version = "0.1"; // valid because functions are objects.
-```
+## arguments
 
-## statement vs expression
-
-- Statement is a piece of code that does something. All code blocks are statements.
-
-- Expression is a piece of code i.e a statement that evaluates to a value. All expressions are statements. But not all statements are expressions.
-
-> A function is both a statement and an expression.
-
-### function statement
+- `arguments` is an Array like object (not an array), that functions provide for accessing all the parameter values passed during function invocation i.e arguments.
+- It has two main functions:
+    - accessing variables via [] and index.
+    - `arguments.length` property (used to loop over parameters as forEach and other Array methods are not available).
+- Common pattern is to convert to array for ease of use.
 
 ```javascript
-function pokeDex() {
-    console.log("Initializing the dex...");
+function myFunc() {
+    const normalArray = Array.prototype.slice.call(arguments);
+    // — or —
+    const normalArray2 = [].slice.call(arguments);
+    // — or —
+    const normalArrayFrom = Array.from(arguments);
 }
 ```
 
-- This does not return anything.
-- Only placed in memory as a named function.
-- Does not do anything unless executed.
+## arguments vs es6 spread
 
-### function expression
+- with es6, spread operator is used instead of arguments as it gives an actual array instead of array like object.
+- spread is always be the last item in parameter list.
+- spread is allowed exactly once.
 
 ```javascript
-var pokeDex = function() {
-    console.log("Initializing the dex...");
+function myFunc(a, b, ...myargs) {
+    // myargs is an array
 }
 ```
 
-- an anonymous function (not named) object is returned as value.
-- the value is assigned to a variable.
-- function behaves as an expression here.
-- it can also be passed in function calls like any other object.
-
-
-## _this_ keyword
-
-- _this_ is set when the execution gets created
-- its reference changes depending on lexical and execution context
-- at global level it is pointing to window object.
-- inside a function defined as an expression for a prop in object, it points to the object itself.
-- inside a nested function definition inside objects, it points to global object window, this is considered a bug by many. To mitigate, a pattern relying scope chain is used by setting a variable `self = this` at top level.
+## function overloading pattern
 
 ```javascript
-var data = {
-    value: "value 1,
-    update: function () {
-        let self = this;
-        console.log(`previous value: ${this.value}`)
-        function update() {
-            self.value = 'value set in nested function';
-            console.log(`updated value: ${self.value}`)
-        }
-        update();
+function greet(firstname, lastname, language) {
+        
+    language = language || 'en';
+    
+    if (language === 'en') {
+        console.log('Hello ' + firstname + ' ' + lastname);   
     }
+    
+    if (language === 'es') {
+        console.log('Hola ' + firstname + ' ' + lastname);   
+    }
+    
 }
-data.update();
-```
 
-- this example contains un n
+function greetEnglish(firstname, lastname) {
+    greet(firstname, lastname, 'en');   
+}
+
+function greetSpanish(firstname, lastname) {
+    greet(firstname, lastname, 'es');   
+}
+
+greetEnglish('John', 'Doe');
+greetSpanish('John', 'Doe');
+```

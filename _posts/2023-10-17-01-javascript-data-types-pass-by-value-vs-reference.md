@@ -70,17 +70,22 @@ From this point onwards koel is a completely new entity and goes separate ways f
 
 ### Pass By Value
 
+- Any primitive data is passed by value
+
 ```javascript
 function passByValue(ditto) {
   ditto++;
+  return ditto;
 }
 let pika = 100;
 console.log(pika); // 100
-passByValue(pika); // pika is copied to ditto i.e passed by value
+passByValue(pika); // 101 - pika is not modified here. It is copied i.e passed by value
 console.log(pika); // 100
 ```
 
 ### Pass By Reference
+
+- Any non primitive data (compound data) is passed by reference.
 
 ```javascript
 function passByReference(koel) {

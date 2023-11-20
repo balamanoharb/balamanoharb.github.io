@@ -26,11 +26,11 @@ Whenever a function invocation is encountered, it creates new execution context 
 
 ## Hoisting
 
-In the execution context's creation phase, all variables are declared first. This is called _hoisting_.
+In the execution context's creation phase, all variables are declared first. This is called _hoisting_. The assignment happens when the interpreter executes the line.
 
 ## Scoping
 
-Javascript has 2 different scoping mechanism based on how a variable is declared. _var_, _let_ and _const_ are the key words used for defining variables.
+A variable is either function scoped or block scoped based on how they are declared. _var_, _let_ and _const_ are the key words used for declraing variables.
 
 ### var
 
@@ -55,6 +55,11 @@ undefined // indicating myVar inside the function is different and hoisted
 "global variable"
 */
 ```
+
+> var is no longer used in production scenario as function scope is harder to use.
+> var allows re-declaring same variable.
+> var enables hoisting making it harder to debug.
+> At top level variables declared using var are placed in global object
 
 ### let, const
 
@@ -87,18 +92,21 @@ console.log(myVal)
 console.log(myVal);
 ```
 
-only difference between _let_ and _const_ is that, variables defined using const can't be re-assigned. This means const is always defined (declaration + assignment in single statement) and can't be declared. If the const value is a non primitive type, it can be modified without re-assigning.
+only difference between _let_ and _const_ is that, variables defined using const can't be re-assigned. This means const is always defined and can't be declared. If the const value is a non primitive type, it can be modified without re-assigning.
 
 ```javascript
 const val; //Uncaught SyntaxError: Missing initializer in const declaration
 const myVal = 100; //right way to use const
+myVal = 200; //Uncaught TypeError: Assignment to constant variable.
 const list = ['apple']
 list.push('organ') //modifying is allowed.
 ```
 
+> In current production scenarios, only let and const are used.
+
 ## Scope Chain:
 
-Whenever a variable is encountered, javascript first checks if the variable is defined in the currently running execution context. If it is not found, it follows the reference to its outer lexical environment. If the variable is not found even there, it again follows the reference to the outer lexical environment of the current execution context. It looks up till it reaches the global context. Only when it is not found, it throws _"Uncaught ReferenceError: variable name is not defined"_.
+Whenever a variable is encountered, javascript first checks if the variable is defined in the currently running execution context. If it is not found, it follows the reference to its outer lexical environment. If the variable is not found there, it again follows the reference to the outer lexical environment of the current execution context. If the variable is found at any point, the lookup is stopped and the value found is returned. If it is not found, it goes up the chain of references till it reaches the global context. Only when it is not found, it throws _"Uncaught ReferenceError: variable name is not defined"_.
 
 
 ## Definitions
@@ -108,4 +116,5 @@ Whenever a variable is encountered, javascript first checks if the variable is d
 - _single threaded_: runs one command at a time
 - _interpreted_: code is run in single step without compiling it to byte code like c, c++.
 - _declaration_ : A variable is named and known to exist but value is not yet assigned.
-- _definition_ : A value for a declared variable is assigned. It involves _=_ operator. Eg: `var value = 100`. This is usually referred to as _definition_.
+- _assignemnt_: A variable is assigned a value or an expression that executes to a value. `x = 10;`
+- _definition_ : declaration + assignment in a one statement = definition. `var x = 10;`
