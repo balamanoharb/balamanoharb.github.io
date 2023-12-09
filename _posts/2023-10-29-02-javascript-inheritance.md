@@ -66,7 +66,7 @@ function Person(fName, lName) {
 }
 // by default prototype property of a function constructor is always an empty object {}.
 Person.prototype.getFullName = function () {
-    return this.fName + " " + this.lName;
+    return this.firstName + " " + this.lastName;
 }
 
 var person1 = new Person('Jonh', 'Doe');

@@ -2,7 +2,7 @@
 layout: "post"
 title: "Arrow functions in JavaScript"
 date: "2023-11-10 19:30:57 +0530"
-permalink: javascript-strings
+permalink: javascript-arrow-functions
 tags: javascript
 ---
 

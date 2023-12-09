@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "ECMAScript Development Process and TC39"
-permalink: ecmascript-development-process
 date: "2023-10-12 06:19:59 +0530"
+permalink: ecmascript-development-process
 tags: javascript
 ---
 

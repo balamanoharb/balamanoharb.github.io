@@ -2,7 +2,7 @@
 layout: "post"
 title: "Symbol in JavaScript"
 date: "2023-11-18 15:20:45 +0530"
-permalink: javascript-strings
+permalink: javascript-symbol
 tags: javascript
 ---
 
