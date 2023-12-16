@@ -207,7 +207,7 @@ x.__proto__.__proto__ -> A.prototype
 
 ### static properties and methods
 
-- by adding 'static' prefix to a property or method inside class, it is stored at the class directly and not considerd when instances are created using new.
+- by adding 'static' prefix to a property or method inside class, it is stored at the class object directly and not considerd when instances are created using `new`.
 - 'static' methods can only access other 'static' methods and properties
 
 ```javascript

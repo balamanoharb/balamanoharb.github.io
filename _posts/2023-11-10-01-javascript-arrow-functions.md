@@ -25,6 +25,7 @@ const add = (a, b) => a + b;
 
 
 // Arrow function with curly braces
+// explicit return statement needed when not a one liner
 const add = (a, b) => {
   return a + b;
 }
@@ -33,7 +34,7 @@ const add = (a, b) => {
 const getVal = _ => ({ value: 100})
 ```
 
-## Limitation
+## Limitations
 
 - One limitation with arrow function is that it can't be used inside objects like regular functions because using `this` will be pointing to global context.
 

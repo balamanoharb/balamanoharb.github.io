@@ -21,7 +21,7 @@ With the latest ECMAScript standard there are seven data types in javascript.
    4. Number
    5. String
    6. Symbol (new in ECMAScript 6)
-2. Object (or) non primitive (or) compound
+2. Objects (or) Reference types
 
 ## How different data types are stored ?
 
