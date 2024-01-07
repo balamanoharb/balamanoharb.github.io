@@ -1,8 +1,8 @@
 ---
 layout: "post"
-title: "Common APIs for coding in JavaScript"
+title: "Common APIs in JavaScript"
 date: "2023-12-16 14:18:30 +0530"
-permalink: javascript-common-apis-for-programming
+permalink: javascript-common-apis
 tags: javascript
 ---
 
@@ -13,6 +13,7 @@ tags: javascript
 - substr
 - replace
 - slice
+- spice
 - split
 - trim
 - toUpperCase

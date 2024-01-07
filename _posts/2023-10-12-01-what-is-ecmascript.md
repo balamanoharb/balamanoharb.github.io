@@ -42,6 +42,12 @@ After developing the standard based on JavaScript, the specification (language) 
 
 Though Oracle owns the trademark for the name "JavaScript", everyone still uses the name widely when referring to the language. To the contrary, the actual name for the language ECMAScript ( ES ) is used only when referring to the standards and many are not even aware of the name ECMAScript.
 
+## Summary
+
+- ECMAScript - the standard based on which javascript features are implemented.
+- Javascript - The programming language that is based on the ECMAScript standard
+- Javascript Engines - different implementations of runtime environments that supports javascript execution. Different flavours such as V8, Spidermonkey.
+
 ## References
 
 - [ECMAScript spec](https://tc39.es/ecma262/){:target="_blank"}{:rel="noopener noreferrer"}
