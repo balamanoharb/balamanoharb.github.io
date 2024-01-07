@@ -73,8 +73,6 @@ function handleResponse(response) {
 get("https://jsonplaceholder.typicode.com/users/1", handleResponse)
 ```
 
-## Browser and JS engine architecture
-
 ## Promises
 
 - promises are a syntax sugar for callbacks
