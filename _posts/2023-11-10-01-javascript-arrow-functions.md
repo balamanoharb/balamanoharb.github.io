@@ -45,7 +45,7 @@ const state = {
 }
 ```
 
-- In constructors also `this` object will be accessible only inside constructor. But adding arrow functions to `this` object will create a copy of the function to every instance created using the constructor, so arrow functions are generally not used in Constructors.
+- In Class also `this` object will be accessible only inside constructor. But adding arrow functions to `this` object will create a copy of the function to every instance created using the constructor like a property, so arrow functions should generally be not used in Constructors.
 
 ```javascript
 class Test {
